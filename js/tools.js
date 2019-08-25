@@ -242,7 +242,7 @@ function morseDecode(str){
   // \u2014 = em dash
   // \u2015 = horizontal bar
   // \u2212 = minus sign
-  str = str.replace(/[\u2022\*\+]/g, '.').replace(/[\u2012\u2013\u2014\u2015\u2212_]/g, '-');
+  //str = str.replace(/[\u2022\*\+]/g, '.').replace(/[\u2012\u2013\u2014\u2015\u2212_]/g, '-');
 
   var parts = str.split(' ');
   var result = '';
@@ -262,7 +262,8 @@ function morseEncode(str){
     if(c)
       result += (result == '' ? '' : ' ') + c;
   }
-  return result.replace(/\./g, '\u2022' /* bullet */).replace(/-/g, '\u2212' /* minus sign */);
+  //return result.replace(/\./g, '\u2022' /* bullet */).replace(/-/g, '\u2212' /* minus sign */);
+  return result;
 }
 
 function bytesToIntStr(bytes){
